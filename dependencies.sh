@@ -1,6 +1,10 @@
 #!/bin/bash
+if [ "$EUID" -ne 0 ]
+  then echo "Execute as root in order to install properly cURL, docker, docker-compose, node, npm and go language"
+  exit
+fi
 
-echo "Execute as root in order to install cURL, docker, docker-compose, node, npm and go language"
+
 
 echo "1. Update & Upgrade"
 apt update && apt upgrade
