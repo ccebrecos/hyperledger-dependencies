@@ -75,9 +75,8 @@ echo "Install Go Language ? (y/n)"
 read ans
 
 if echo "$ans" | grep -iq "^y"; then
-	curl -O https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
-	tar -xvf go1.8.linux-amd64.tar.gz
-	mv go /usr/local
+	curl -O https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
+	tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz
 	echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
 	source ~/.profile
 	
