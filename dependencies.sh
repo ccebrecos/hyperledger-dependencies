@@ -56,12 +56,12 @@ if echo "$ans" | grep -iq "^y"; then
 fi
 
 ##--------------------- node.js --------------------- ##
-# Node 6.9
+# Node 8.10.0
 echo "Install node ? (y/n)"
 read ans
 
 if echo "$ans" | grep -iq "^y"; then
-	curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 	apt-get install -y nodejs
 
 	# Check	
